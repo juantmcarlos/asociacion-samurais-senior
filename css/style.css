@@ -1,0 +1,115 @@
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima de la ventana */
+    min-width: 100vh; /* Anchura mínima de la ventana */
+    padding: 0 0.75rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 2. El wrapper que contiene main y aside */
+.content-wrapper {
+    display: flex;
+    flex: 1; /* Esto hace que el contenido ocupe el espacio restante */
+    flex-direction: row; /* Diseño horizontal */
+    z-index: 1;
+    padding-top: 3.00rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    background-color: #fff;
+}
+
+/* 3. Main al 85% */
+main {
+    flex: 0 0 85%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* 4. Aside a la derecha al 15% */
+aside {
+    flex: 0 0 15%;
+    background-color: #e2e2e2;
+    padding: 20px;
+    text-align: center;
+}
+
+aside ul {
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside ul li {
+    margin-bottom: 1.50rem;
+    list-style-type: none;
+    width: fit-content;
+    padding: 0.50rem 0.75rem;
+    background-color: rgb(109, 159, 253, 0.45);
+    color: rgb(0, 0, 138);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+aside ul li a { text-decoration: none; color: rgba(0, 0, 77, 0.85)}
+
+/* 5. Footer al final */
+footer {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a { text-decoration: none; color: rgb(255, 255, 255); }
+
+h1 {
+    font-size: 2.2rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    background-color: rgb(255, 185, 95, 0.60);
+    color: rgb(92, 0, 0, 0.95);
+    padding: 0.25rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-block-start: 0.20rem;
+    margin-block-end: 0.20rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-size: 1rem; font-weight: 700;
+    color: rgb(238, 9, 55);
+}
+
+.container { display: flex; }
+
+.container div {
+    border: 1px solid #4f4f4f;
+    border-radius: 0.45rem;
+    margin: 0.45rem; padding: 1rem;
+}
+
+.container h3 { text-align: center; }
+.container img { display: block; margin: auto; width: 250px; }
+
+.subir { font-size: 2rem; color: rgb(206, 98, 22, 0.75); }
+.subir a { text-decoration: none; }
